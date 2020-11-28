@@ -14,6 +14,10 @@ function setCategory() {
   updateResultsText(categoryCommands)
 }
 
+$('#search+button').on('click', () => {
+  alert("test")
+})
+
 function updateResultsText(arr) {  
   $('#commandError').text((arr.length <= 0) ? 'There is nothing to see here.' : '');
 }
