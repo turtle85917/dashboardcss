@@ -16,14 +16,26 @@ function setCategory() {
 
 $('#search+button').on('click', () => {
   const query = $("#search input").val();
-  const results = new Fuse(commands, {
+  const commands = new Fuse(commands, {
     isCaseSensitive: false,
     keys: [
       { name: 'name', weight: 1 },
       { name: 'category', weight: 0.5 }
     ]
-  }).search(query);
-  console.log(results, commands)
+  })
+  .search(query)
+  .map(r => r.item);
+  
+  $('.categories li').removeClass('active');
+  $('.commands li').hide();
+  $(".dropdown-toggle").hide()
+  
+  for (const command of commands) {
+    $(`${command.name}Command`).show();
+    $(`${command.name}`).show();
+  }
+  
+  updateResultsText(commands);
 })
 
 function updateResultsText(arr) {  
