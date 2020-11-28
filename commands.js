@@ -28,14 +28,14 @@ $('#search+button').on('click', () => {
   
   $('.categories li').removeClass('active');
   $('.commands li').hide();
-  $(".dropdown-toggle").hide()
+  $(".dropdown-toggle").hide();
   
   for (const command of results) {
-    $(`${command.name}Command`).show();
-    $(`${command.name}`).show();
+    $(`#${command.name}Command`).show();
+    $(`#${command.name}`).show();
   }
   
-  updateResultsText(commands);
+  updateResultsText(results);
 })
 
 function updateResultsText(arr) {  
