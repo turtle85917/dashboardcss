@@ -23,6 +23,7 @@ function blank() {
 $('#search+button').on('click', () => {
   const query = $("#search input").val();
   if (!query) {
+    $('.categories li').removeClass('active');
     $('.commands li').show();
     $('.dropdown-toggle').show();
     return;
