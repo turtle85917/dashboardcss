@@ -16,6 +16,7 @@ function setCategory() {
 
 $('#search+button').on('click', () => {
   const query = $("#search input").val();
+  if (!query.trim()) return $('.commands li').show();
   const results = new Fuse(commands, {
     isCaseSensitive: false,
     keys: [
