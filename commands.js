@@ -20,7 +20,7 @@ $('#search+button').on('click', () => {
     isCaseSensitive: false,
     keys: [
       { name: 'name', weight: 1 },
-      { name: 'category', weight: 0.3 }
+      { name: 'category', weight: 0.5 }
     ]
   }).search(query);
   console.log(results)
