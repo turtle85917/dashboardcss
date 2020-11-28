@@ -14,3 +14,7 @@ li {
   border-radius: 5px;
   border: 1px solid lightgray !important;
 }
+
+.dropdown {
+  text-align: center;
+}
