@@ -18,4 +18,5 @@ li {
 .dropdown {
   top: -45px;
   left: 100px;
+  width: 50px;
 }
