@@ -32,7 +32,7 @@ $('#search+button').on('click', () => {
   
   for (const command of results) {
     $(`#${command.name}Command`).show();
-    $(`#${command.name}`).show();
+    $(`.${command.name}`).show();
   }
   
   updateResultsText(results);
