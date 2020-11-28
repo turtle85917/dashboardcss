@@ -6,9 +6,10 @@ function setCategory() {
   selected.addClass('active');
   
   $('.commands li').hide();
-  const categoryCommands = $(`.commands .${selected[0].id}`)
+  const categoryCommands = $(`.commands .${selected[0].id}`);
+  const dropdownCommands = $(`.dropdown-toggle .${selected[0].id}`);
   categoryCommands.show();
-  console.log(categoryCommands[0].id)
+  console.log(dropdownCommands)
   updateResultsText(categoryCommands)
 }
 
