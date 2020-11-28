@@ -1,4 +1,3 @@
-$('.commands li').show();
 $('.categories li').on('click', setCategory)
 
 function setCategory() {
