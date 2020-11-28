@@ -9,7 +9,8 @@ function setCategory() {
   const categoryCommands = $(`.commands .${selected[0].id}`);
   const dropdownCommands = $(`.dropdown-toggle .${selected[0].id}`);
   categoryCommands.show();
-  console.log(dropdownCommands, selected[0].id)
+  dropdownCommands.show();
+//   console.log(dropdownCommands, selected[0].id)
   updateResultsText(categoryCommands)
 }
 
