@@ -16,7 +16,7 @@ function setCategory() {
 
 $('#search+button').on('click', () => {
   const query = $("#search input").val();
-  const commands = new Fuse(commands, {
+  const results = new Fuse(commands, {
     isCaseSensitive: false,
     keys: [
       { name: 'name', weight: 1 },
@@ -30,7 +30,7 @@ $('#search+button').on('click', () => {
   $('.commands li').hide();
   $(".dropdown-toggle").hide()
   
-  for (const command of commands) {
+  for (const command of results) {
     $(`${command.name}Command`).show();
     $(`${command.name}`).show();
   }
