@@ -23,7 +23,7 @@ $('#search+button').on('click', () => {
       { name: 'category', weight: 0.5 }
     ]
   }).search(query);
-  console.log(results)
+  console.log(results, commands)
 })
 
 function updateResultsText(arr) {  
