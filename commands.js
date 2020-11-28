@@ -1,7 +1,7 @@
 $('.categories li').on('click', setCategory)
 
 function setCategory() {
-  $('.categories li').removeClass('active');
+  blank();
   const selected = $(this)
   selected.addClass('active');
   
@@ -12,6 +12,12 @@ function setCategory() {
   categoryCommands.show();
   dropdownCommands.show();
   updateResultsText(categoryCommands)
+}
+
+function blank() {
+  $('.categories li').removeClass('active');
+  $('.commands li').hide();
+  $(".dropdown-toggle").hide();
 }
 
 $('#search+button').on('click', () => {
@@ -28,9 +34,7 @@ $('#search+button').on('click', () => {
   .search(query)
   .map(r => r.item);
   
-  $('.categories li').removeClass('active');
-  $('.commands li').hide();
-  $(".dropdown-toggle").hide();
+  blank();
   
   for (const command of results) {
     $(`#${command.name}Command`).show();
