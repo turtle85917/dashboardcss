@@ -22,7 +22,11 @@ function blank() {
 
 $('#search+button').on('click', () => {
   const query = $("#search input").val();
-  if (!query) return $('.commands li').show();
+  if (!query) {
+    $('.commands li').show();
+    $('.dropdown-toggle').show();
+    return;
+  }
   const results = new Fuse(commands, {
     isCaseSensitive: false,
     keys: [
