@@ -16,5 +16,5 @@ li {
 }
 
 .dropdown {
-  float: left;
+  display: inline;
 }
