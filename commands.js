@@ -7,7 +7,7 @@ function setCategory() {
   
   $('.commands li').hide();
   const categoryCommands = $(`.commands .${selected[0].id}`);
-  const dropdownCommands = $(`.dropdown-toggle .${selected[0].id}`);
+  const dropdownCommands = $(`.dropdown #${selected[0].id}`);
   categoryCommands.show();
   dropdownCommands.show();
 //   console.log(dropdownCommands, selected[0].id)
