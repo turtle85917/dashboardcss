@@ -5,7 +5,7 @@ function setCategory() {
   const selected = $(this)
   selected.addClass('active');
   
-  $('.categories li').hide();
+  $('.commands li').hide();
   const categoryCommands = $(`.commands .${selected[0].id}`)
   categoryCommands.show();
   updateResultsText(categoryCommands)
