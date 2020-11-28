@@ -15,7 +15,7 @@ function setCategory() {
 }
 
 $('#search+button').on('click', () => {
-  const query = $("#search+input").val();
+  const query = $("#search input").val();
   console.log(query);
 })
 
