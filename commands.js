@@ -16,7 +16,14 @@ function setCategory() {
 
 $('#search+button').on('click', () => {
   const query = $("#search input").val();
-  console.log(Fuse);
+  const fuse = new Fuse(commands, {
+    isCaseSensitive: false,
+    keys: [
+      { name: 'name', weight: 1 },
+      { name: 'category', weight: 0.3 }
+    ]
+  })
+  console.log(fuse)
 })
 
 function updateResultsText(arr) {  
