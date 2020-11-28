@@ -6,11 +6,11 @@ function setCategory() {
   selected.addClass('active');
   
   $('.commands li').hide();
+  $(".dropdown-toggle").hide()
   const categoryCommands = $(`.commands .${selected[0].id}`);
   const dropdownCommands = $(`.dropdown #${selected[0].id}`);
   categoryCommands.show();
   dropdownCommands.show();
-  console.log(dropdownCommands)
   updateResultsText(categoryCommands)
 }
 
