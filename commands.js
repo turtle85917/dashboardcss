@@ -10,7 +10,7 @@ function setCategory() {
   const dropdownCommands = $(`.dropdown #${selected[0].id}`);
   categoryCommands.show();
   dropdownCommands.show();
-//   console.log(dropdownCommands, selected[0].id)
+  console.log(dropdownCommands)
   updateResultsText(categoryCommands)
 }
 
