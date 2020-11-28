@@ -8,6 +8,7 @@ function setCategory() {
   $('.commands li').hide();
   const categoryCommands = $(`.commands .${selected[0].id}`)
   categoryCommands.show();
+  console.log(categoryCommands)
   updateResultsText(categoryCommands)
 }
 
